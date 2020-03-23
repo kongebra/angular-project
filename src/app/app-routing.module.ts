@@ -1,17 +1,36 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { BlogLayoutComponent } from '@core/layout/blog-layout/blog-layout.component';
+import { AdminLayoutComponent } from '@core/layout/admin-layout/admin-layout.component';
+import { componentFactoryName } from '@angular/compiler';
 
 const routes: Routes = [
   {
-    path: 'blog',
-    loadChildren: () =>
-      import('@features/blog/blog.module').then(m => m.BlogModule),
+    path: '',
+    component: BlogLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('@features/blog/blog.module').then(m => m.BlogModule),
+      },
+    ],
   },
   {
     path: 'admin',
-    loadChildren: () =>
-      import('@features/admin/admin.module').then(m => m.AdminModule),
+    component: AdminLayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('@features/admin/admin.module').then(m => m.AdminModule),
+      },
+    ],
   },
+
+  // { path: 'login', component: null },
+
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
