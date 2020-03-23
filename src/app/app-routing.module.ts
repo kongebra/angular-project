@@ -5,8 +5,9 @@ import { AdminLayoutComponent } from '@core/layout/admin-layout/admin-layout.com
 import { componentFactoryName } from '@angular/compiler';
 
 const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'blog' },
   {
-    path: '',
+    path: 'blog',
     component: BlogLayoutComponent,
     children: [
       {
