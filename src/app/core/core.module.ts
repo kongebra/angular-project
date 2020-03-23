@@ -12,6 +12,7 @@ import { AdminSidebarComponent } from './layout/admin-sidebar/admin-sidebar.comp
 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,15 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     // material
     MatSidenavModule,
     MatToolbarModule,
+    MatButtonModule,
   ],
-  exports: [BlogLayoutComponent, AdminLayoutComponent],
+  exports: [
+    // vendor
+    RouterModule,
+
+    // layouts
+    BlogLayoutComponent,
+    AdminLayoutComponent,
+  ],
 })
 export class CoreModule {}
