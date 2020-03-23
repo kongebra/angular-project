@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [],
@@ -8,6 +9,7 @@ import { RouterModule } from '@angular/router';
     // vendor
     CommonModule,
     RouterModule,
+    HttpClientModule,
 
     // material
   ],
@@ -15,6 +17,7 @@ import { RouterModule } from '@angular/router';
     // vendor
     CommonModule,
     RouterModule,
+    HttpClientModule,
 
     // material
     // local
