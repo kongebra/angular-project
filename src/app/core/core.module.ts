@@ -35,9 +35,6 @@ import { MatButtonModule } from '@angular/material/button';
     MatButtonModule,
   ],
   exports: [
-    // vendor
-    RouterModule,
-
     // layouts
     BlogLayoutComponent,
     AdminLayoutComponent,
