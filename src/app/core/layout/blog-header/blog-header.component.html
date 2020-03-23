@@ -4,8 +4,9 @@
 
     <span class="spacer"></span>
 
-    <button mat-flat-button [color]="color" routerLink="/blog/home" routerLinkActive="active">Home</button>
-    <button mat-flat-button [color]="color" routerLink="/blog/about" routerLinkActive="active">About</button>
-    <button mat-flat-button [color]="color" routerLink="/blog/contact" routerLinkActive="active">Contact</button>
+    <button *ngFor="let link of links" mat-flat-button [color]="color" [routerLink]="link.href"
+      routerLinkActive="active">
+      {{ link.text }}
+    </button>
   </mat-toolbar-row>
 </mat-toolbar>
