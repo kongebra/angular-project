@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule } from '@angular/router';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { BlogLayoutComponent } from './layout/blog-layout/blog-layout.component';
 import { AdminLayoutComponent } from './layout/admin-layout/admin-layout.component';
@@ -13,6 +14,9 @@ import { AdminSidebarComponent } from './layout/admin-sidebar/admin-sidebar.comp
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   declarations: [
@@ -28,11 +32,15 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserModule,
     BrowserAnimationsModule,
     RouterModule,
+    FlexLayoutModule,
 
     // material
     MatSidenavModule,
     MatToolbarModule,
     MatButtonModule,
+    MatListModule,
+    MatIconModule,
+    MatDividerModule,
   ],
   exports: [
     // layouts
